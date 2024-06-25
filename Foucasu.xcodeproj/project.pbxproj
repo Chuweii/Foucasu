@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF563BBA2C23B5280037834B /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BB92C23B5280037834B /* FocusView.swift */; };
+		EF563BBC2C23BC310037834B /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BBB2C23BC300037834B /* TodoListView.swift */; };
+		EF563BC02C23BEE70037834B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BBF2C23BEE70037834B /* TabBarView.swift */; };
+		EF563BC62C23C35A0037834B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BC52C23C35A0037834B /* Color+Extension.swift */; };
 		EF7ABC3A2C1D6924008DA464 /* CustomTabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC392C1D6924008DA464 /* CustomTabApp.swift */; };
-		EF7ABC3C2C1D6924008DA464 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC3B2C1D6924008DA464 /* ContentView.swift */; };
+		EF7ABC3C2C1D6924008DA464 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC3B2C1D6924008DA464 /* CustomTabBar.swift */; };
 		EF7ABC3E2C1D6925008DA464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7ABC3D2C1D6925008DA464 /* Assets.xcassets */; };
 		EF7ABC412C1D6925008DA464 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7ABC402C1D6925008DA464 /* Preview Assets.xcassets */; };
+		EF7ABC482C1D6A96008DA464 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC472C1D6A96008DA464 /* Tabs.swift */; };
+		EF7ABC4A2C1FBE29008DA464 /* TabBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC492C1FBE29008DA464 /* TabBarData.swift */; };
+		EF7ABC4D2C1FC40E008DA464 /* NoAnimationButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC4C2C1FC40E008DA464 /* NoAnimationButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF563BB92C23B5280037834B /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		EF563BBB2C23BC300037834B /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		EF563BBF2C23BEE70037834B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EF563BC52C23C35A0037834B /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		EF7ABC362C1D6924008DA464 /* CustomTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7ABC392C1D6924008DA464 /* CustomTabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabApp.swift; sourceTree = "<group>"; };
-		EF7ABC3B2C1D6924008DA464 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF7ABC3B2C1D6924008DA464 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		EF7ABC3D2C1D6925008DA464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF7ABC402C1D6925008DA464 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF7ABC472C1D6A96008DA464 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		EF7ABC492C1FBE29008DA464 /* TabBarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarData.swift; sourceTree = "<group>"; };
+		EF7ABC4C2C1FC40E008DA464 /* NoAnimationButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAnimationButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF563BB82C23B5100037834B /* CoreView */ = {
+			isa = PBXGroup;
+			children = (
+				EF563BBF2C23BEE70037834B /* TabBarView.swift */,
+				EF563BB92C23B5280037834B /* FocusView.swift */,
+				EF563BBB2C23BC300037834B /* TodoListView.swift */,
+			);
+			path = CoreView;
+			sourceTree = "<group>";
+		};
+		EF563BC12C23C2030037834B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EF7ABC4E2C1FC48E008DA464 /* CustomTabBar */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EF563BC22C23C23E0037834B /* CustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+				EF7ABC4B2C1FC3DB008DA464 /* ButtonStyle */,
+			);
+			path = CustomStyle;
+			sourceTree = "<group>";
+		};
+		EF563BC32C23C2670037834B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF563BC52C23C35A0037834B /* Color+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF563BC42C23C2920037834B /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				EF7ABC3D2C1D6925008DA464 /* Assets.xcassets */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		EF7ABC2D2C1D6924008DA464 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				EF7ABC392C1D6924008DA464 /* CustomTabApp.swift */,
-				EF7ABC3B2C1D6924008DA464 /* ContentView.swift */,
-				EF7ABC3D2C1D6925008DA464 /* Assets.xcassets */,
+				EF563BB82C23B5100037834B /* CoreView */,
+				EF563BC12C23C2030037834B /* Component */,
+				EF563BC22C23C23E0037834B /* CustomStyle */,
+				EF563BC32C23C2670037834B /* Extension */,
+				EF563BC42C23C2920037834B /* Others */,
 				EF7ABC3F2C1D6925008DA464 /* Preview Content */,
 			);
 			path = CustomTab;
@@ -65,6 +124,24 @@
 				EF7ABC402C1D6925008DA464 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF7ABC4B2C1FC3DB008DA464 /* ButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				EF7ABC4C2C1FC40E008DA464 /* NoAnimationButtonStyle.swift */,
+			);
+			path = ButtonStyle;
+			sourceTree = "<group>";
+		};
+		EF7ABC4E2C1FC48E008DA464 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EF7ABC3B2C1D6924008DA464 /* CustomTabBar.swift */,
+				EF7ABC472C1D6A96008DA464 /* Tabs.swift */,
+				EF7ABC492C1FBE29008DA464 /* TabBarData.swift */,
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7ABC3C2C1D6924008DA464 /* ContentView.swift in Sources */,
+				EF7ABC3C2C1D6924008DA464 /* CustomTabBar.swift in Sources */,
+				EF563BC62C23C35A0037834B /* Color+Extension.swift in Sources */,
+				EF563BC02C23BEE70037834B /* TabBarView.swift in Sources */,
 				EF7ABC3A2C1D6924008DA464 /* CustomTabApp.swift in Sources */,
+				EF7ABC4D2C1FC40E008DA464 /* NoAnimationButtonStyle.swift in Sources */,
+				EF563BBA2C23B5280037834B /* FocusView.swift in Sources */,
+				EF7ABC482C1D6A96008DA464 /* Tabs.swift in Sources */,
+				EF563BBC2C23BC310037834B /* TodoListView.swift in Sources */,
+				EF7ABC4A2C1FBE29008DA464 /* TabBarData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
