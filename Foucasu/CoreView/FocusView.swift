@@ -267,8 +267,6 @@ extension FocusView {
 }
 
 #Preview {
-    let tabBarData: TabBarData = .init()
     let viewModel: FocusViewModel = .init()
-    return TabBarView(tabBarData: tabBarData, focusViewModel: viewModel)
-
+    return TabBarView(focusViewModel: viewModel)
 }

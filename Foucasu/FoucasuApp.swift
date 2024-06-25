@@ -14,12 +14,11 @@ struct FoucasuApp: App {
     @Environment(\.scenePhase) var phase
     @State var lastActiveTimeStamp: Date = .init()
 
-    let tabBarData: TabBarData = .init()
     let focusViewModel: FocusViewModel = .init()
     
     var body: some Scene {
         WindowGroup {
-            TabBarView(tabBarData: tabBarData, focusViewModel: focusViewModel)
+            TabBarView(focusViewModel: focusViewModel)
         }
         .onChange(of: phase, { _, newValue in
             if focusViewModel.isStarted {

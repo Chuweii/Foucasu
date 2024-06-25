@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     // MARK: - Properties
 
-    let tabBarData: TabBarData
+    let tabBarData: TabBarData = .init()
     let focusViewModel: FocusViewModel
 
     var body: some View {
@@ -33,5 +33,5 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView(tabBarData: .init(), focusViewModel: .init())
+    TabBarView(focusViewModel: .init())
 }
