@@ -1,6 +1,6 @@
 //
 //  TabBarView.swift
-//  CustomTab
+//  Foucasu
 //
 //  Created by Wei Chu on 2024/6/20.
 //
@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct TabBarView: View {
+    // MARK: - Properties
+
     let tabBarData: TabBarData = .init()
 
     var body: some View {
         VStack(spacing: 0) {
-            ZStack{
+            ZStack {
                 switch tabBarData.activeTab {
-                case .Focus: FocusView()
-                case .List: TodoListView()
+                case .Focus: 
+                    FocusView()
+                        .preferredColorScheme(.dark)
+                case .List: 
+                    TodoListView()
+                        .preferredColorScheme(.light)
                 }
             }.ignoresSafeArea()
 

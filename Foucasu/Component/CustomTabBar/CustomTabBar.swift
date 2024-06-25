@@ -1,6 +1,6 @@
 //
-//  ContentView.swift
-//  CustomTab
+//  CustomTabBar.swift
+//  Foucasu
 //
 //  Created by Wei Chu on 2024/6/15.
 //

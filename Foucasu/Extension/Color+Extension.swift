@@ -1,6 +1,6 @@
 //
 //  Color+Extension.swift
-//  CustomTab
+//  Foucasu
 //
 //  Created by Wei Chu on 2024/6/20.
 //
@@ -35,8 +35,8 @@ extension Color {
         )
     }
 
-    static let primary500 = Color(hex: "#694BA4")
-    static let primary300 = Color(hex: "#614AEF")
+    static let primary500 = Color(hex: "#005786")
+    static let primary300 = Color(hex: "#4C8CAF")
     static let gray100 = Color(hex: "#F2F2F2")
     static let gray200 = Color(hex: "#DCDCDC")
     static let gray300 = Color(hex: "#B7B7B7")
@@ -54,7 +54,7 @@ extension Color {
     static let blue700 = Color(hex: "#0F5BB3")
     static let mask100 = Color(hex: "#C4C4C4").opacity(0.5)
     static let mask500 = Color(.black).opacity(0.8)
-    static let backgroundDark = Color(hex: "#1F1A30")
+    static let backgroundDark = Color(hex: "#00354E")
 }
 
 extension ShapeStyle where Self == Color {

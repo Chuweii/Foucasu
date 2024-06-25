@@ -1,6 +1,6 @@
 //
-//  TabItem.swift
-//  CustomTab
+//  Tabs.swift
+//  Foucasu
 //
 //  Created by Wei Chu on 2024/6/15.
 //

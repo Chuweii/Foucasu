@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF3119252C29AE1600209AB5 /* FoucasuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119242C29AE1600209AB5 /* FoucasuTests.swift */; };
+		EF3119332C29AEC500209AB5 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = EF3119322C29AEC500209AB5 /* Quick */; };
+		EF3119352C29AECD00209AB5 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = EF3119342C29AECD00209AB5 /* Nimble */; };
+		EF3119372C29AF3E00209AB5 /* FocusViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119362C29AF3E00209AB5 /* FocusViewModelSpec.swift */; };
 		EF563BBA2C23B5280037834B /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BB92C23B5280037834B /* FocusView.swift */; };
 		EF563BBC2C23BC310037834B /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BBB2C23BC300037834B /* TodoListView.swift */; };
 		EF563BC02C23BEE70037834B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BBF2C23BEE70037834B /* TabBarView.swift */; };
 		EF563BC62C23C35A0037834B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BC52C23C35A0037834B /* Color+Extension.swift */; };
-		EF7ABC3A2C1D6924008DA464 /* CustomTabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC392C1D6924008DA464 /* CustomTabApp.swift */; };
+		EF563BC82C23EB920037834B /* SafeArea+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BC72C23EB920037834B /* SafeArea+Extension.swift */; };
+		EF563BCA2C27C44A0037834B /* FocusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BC92C27C44A0037834B /* FocusViewModel.swift */; };
+		EF563BCC2C27D4500037834B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BCB2C27D4500037834B /* Extension.swift */; };
+		EF563BCE2C27D4BD0037834B /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BCD2C27D4BD0037834B /* RoundedCorner.swift */; };
+		EF7ABC3A2C1D6924008DA464 /* FoucasuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC392C1D6924008DA464 /* FoucasuApp.swift */; };
 		EF7ABC3C2C1D6924008DA464 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC3B2C1D6924008DA464 /* CustomTabBar.swift */; };
 		EF7ABC3E2C1D6925008DA464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7ABC3D2C1D6925008DA464 /* Assets.xcassets */; };
 		EF7ABC412C1D6925008DA464 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7ABC402C1D6925008DA464 /* Preview Assets.xcassets */; };
@@ -20,13 +28,30 @@
 		EF7ABC4D2C1FC40E008DA464 /* NoAnimationButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ABC4C2C1FC40E008DA464 /* NoAnimationButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EF3119262C29AE1600209AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF7ABC2E2C1D6924008DA464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF7ABC352C1D6924008DA464;
+			remoteInfo = Foucasu;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EF3119222C29AE1600209AB5 /* FoucasuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoucasuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3119242C29AE1600209AB5 /* FoucasuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoucasuTests.swift; sourceTree = "<group>"; };
+		EF3119362C29AF3E00209AB5 /* FocusViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewModelSpec.swift; sourceTree = "<group>"; };
 		EF563BB92C23B5280037834B /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		EF563BBB2C23BC300037834B /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		EF563BBF2C23BEE70037834B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		EF563BC52C23C35A0037834B /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		EF7ABC362C1D6924008DA464 /* CustomTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF7ABC392C1D6924008DA464 /* CustomTabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabApp.swift; sourceTree = "<group>"; };
+		EF563BC72C23EB920037834B /* SafeArea+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SafeArea+Extension.swift"; sourceTree = "<group>"; };
+		EF563BC92C27C44A0037834B /* FocusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewModel.swift; sourceTree = "<group>"; };
+		EF563BCB2C27D4500037834B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EF563BCD2C27D4BD0037834B /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		EF7ABC362C1D6924008DA464 /* Foucasu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foucasu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7ABC392C1D6924008DA464 /* FoucasuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoucasuApp.swift; sourceTree = "<group>"; };
 		EF7ABC3B2C1D6924008DA464 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		EF7ABC3D2C1D6925008DA464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF7ABC402C1D6925008DA464 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -36,6 +61,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EF31191F2C29AE1600209AB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3119332C29AEC500209AB5 /* Quick in Frameworks */,
+				EF3119352C29AECD00209AB5 /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF7ABC332C1D6924008DA464 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,12 +80,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF3119232C29AE1600209AB5 /* FoucasuTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3119242C29AE1600209AB5 /* FoucasuTests.swift */,
+				EF3119362C29AF3E00209AB5 /* FocusViewModelSpec.swift */,
+			);
+			path = FoucasuTests;
+			sourceTree = "<group>";
+		};
+		EF3119312C29AEC500209AB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF563BB82C23B5100037834B /* CoreView */ = {
 			isa = PBXGroup;
 			children = (
 				EF563BBF2C23BEE70037834B /* TabBarView.swift */,
 				EF563BB92C23B5280037834B /* FocusView.swift */,
 				EF563BBB2C23BC300037834B /* TodoListView.swift */,
+				EF563BC92C27C44A0037834B /* FocusViewModel.swift */,
 			);
 			path = CoreView;
 			sourceTree = "<group>";
@@ -60,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7ABC4E2C1FC48E008DA464 /* CustomTabBar */,
+				EF563BCD2C27D4BD0037834B /* RoundedCorner.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -76,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				EF563BC52C23C35A0037834B /* Color+Extension.swift */,
+				EF563BC72C23EB920037834B /* SafeArea+Extension.swift */,
+				EF563BCB2C27D4500037834B /* Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -91,23 +145,26 @@
 		EF7ABC2D2C1D6924008DA464 = {
 			isa = PBXGroup;
 			children = (
-				EF7ABC382C1D6924008DA464 /* CustomTab */,
+				EF7ABC382C1D6924008DA464 /* Foucasu */,
+				EF3119232C29AE1600209AB5 /* FoucasuTests */,
 				EF7ABC372C1D6924008DA464 /* Products */,
+				EF3119312C29AEC500209AB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		EF7ABC372C1D6924008DA464 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF7ABC362C1D6924008DA464 /* CustomTab.app */,
+				EF7ABC362C1D6924008DA464 /* Foucasu.app */,
+				EF3119222C29AE1600209AB5 /* FoucasuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF7ABC382C1D6924008DA464 /* CustomTab */ = {
+		EF7ABC382C1D6924008DA464 /* Foucasu */ = {
 			isa = PBXGroup;
 			children = (
-				EF7ABC392C1D6924008DA464 /* CustomTabApp.swift */,
+				EF7ABC392C1D6924008DA464 /* FoucasuApp.swift */,
 				EF563BB82C23B5100037834B /* CoreView */,
 				EF563BC12C23C2030037834B /* Component */,
 				EF563BC22C23C23E0037834B /* CustomStyle */,
@@ -115,7 +172,7 @@
 				EF563BC42C23C2920037834B /* Others */,
 				EF7ABC3F2C1D6925008DA464 /* Preview Content */,
 			);
-			path = CustomTab;
+			path = Foucasu;
 			sourceTree = "<group>";
 		};
 		EF7ABC3F2C1D6925008DA464 /* Preview Content */ = {
@@ -147,9 +204,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF7ABC352C1D6924008DA464 /* CustomTab */ = {
+		EF3119212C29AE1600209AB5 /* FoucasuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF7ABC442C1D6925008DA464 /* Build configuration list for PBXNativeTarget "CustomTab" */;
+			buildConfigurationList = EF31192A2C29AE1600209AB5 /* Build configuration list for PBXNativeTarget "FoucasuTests" */;
+			buildPhases = (
+				EF31191E2C29AE1600209AB5 /* Sources */,
+				EF31191F2C29AE1600209AB5 /* Frameworks */,
+				EF3119202C29AE1600209AB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3119272C29AE1600209AB5 /* PBXTargetDependency */,
+			);
+			name = FoucasuTests;
+			packageProductDependencies = (
+				EF3119322C29AEC500209AB5 /* Quick */,
+				EF3119342C29AECD00209AB5 /* Nimble */,
+			);
+			productName = FoucasuTests;
+			productReference = EF3119222C29AE1600209AB5 /* FoucasuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF7ABC352C1D6924008DA464 /* Foucasu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7ABC442C1D6925008DA464 /* Build configuration list for PBXNativeTarget "Foucasu" */;
 			buildPhases = (
 				EF7ABC322C1D6924008DA464 /* Sources */,
 				EF7ABC332C1D6924008DA464 /* Frameworks */,
@@ -159,9 +238,11 @@
 			);
 			dependencies = (
 			);
-			name = CustomTab;
+			name = Foucasu;
+			packageProductDependencies = (
+			);
 			productName = CustomTab;
-			productReference = EF7ABC362C1D6924008DA464 /* CustomTab.app */;
+			productReference = EF7ABC362C1D6924008DA464 /* Foucasu.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,12 +255,16 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					EF3119212C29AE1600209AB5 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = EF7ABC352C1D6924008DA464;
+					};
 					EF7ABC352C1D6924008DA464 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = EF7ABC312C1D6924008DA464 /* Build configuration list for PBXProject "CustomTab" */;
+			buildConfigurationList = EF7ABC312C1D6924008DA464 /* Build configuration list for PBXProject "Foucasu" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,16 +273,28 @@
 				Base,
 			);
 			mainGroup = EF7ABC2D2C1D6924008DA464;
+			packageReferences = (
+				EF31192B2C29AE7000209AB5 /* XCRemoteSwiftPackageReference "Quick" */,
+				EF31192E2C29AE8400209AB5 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = EF7ABC372C1D6924008DA464 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF7ABC352C1D6924008DA464 /* CustomTab */,
+				EF7ABC352C1D6924008DA464 /* Foucasu */,
+				EF3119212C29AE1600209AB5 /* FoucasuTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EF3119202C29AE1600209AB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF7ABC342C1D6924008DA464 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +307,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF31191E2C29AE1600209AB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3119372C29AF3E00209AB5 /* FocusViewModelSpec.swift in Sources */,
+				EF3119252C29AE1600209AB5 /* FoucasuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF7ABC322C1D6924008DA464 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,7 +323,11 @@
 				EF7ABC3C2C1D6924008DA464 /* CustomTabBar.swift in Sources */,
 				EF563BC62C23C35A0037834B /* Color+Extension.swift in Sources */,
 				EF563BC02C23BEE70037834B /* TabBarView.swift in Sources */,
-				EF7ABC3A2C1D6924008DA464 /* CustomTabApp.swift in Sources */,
+				EF563BCC2C27D4500037834B /* Extension.swift in Sources */,
+				EF563BCE2C27D4BD0037834B /* RoundedCorner.swift in Sources */,
+				EF563BC82C23EB920037834B /* SafeArea+Extension.swift in Sources */,
+				EF7ABC3A2C1D6924008DA464 /* FoucasuApp.swift in Sources */,
+				EF563BCA2C27C44A0037834B /* FocusViewModel.swift in Sources */,
 				EF7ABC4D2C1FC40E008DA464 /* NoAnimationButtonStyle.swift in Sources */,
 				EF563BBA2C23B5280037834B /* FocusView.swift in Sources */,
 				EF7ABC482C1D6A96008DA464 /* Tabs.swift in Sources */,
@@ -228,7 +338,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EF3119272C29AE1600209AB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF7ABC352C1D6924008DA464 /* Foucasu */;
+			targetProxy = EF3119262C29AE1600209AB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EF3119282C29AE1600209AB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2X5XPADK8C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chu.FoucasuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foucasu.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Foucasu";
+			};
+			name = Debug;
+		};
+		EF3119292C29AE1600209AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2X5XPADK8C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chu.FoucasuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foucasu.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Foucasu";
+			};
+			name = Release;
+		};
 		EF7ABC422C1D6925008DA464 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CustomTab/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Foucasu/Preview Content\"";
 				DEVELOPMENT_TEAM = 2X5XPADK8C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -369,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chu.CustomTab;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chu.Foucasu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -384,7 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CustomTab/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Foucasu/Preview Content\"";
 				DEVELOPMENT_TEAM = 2X5XPADK8C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -398,7 +552,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chu.CustomTab;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chu.Foucasu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -409,7 +563,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EF7ABC312C1D6924008DA464 /* Build configuration list for PBXProject "CustomTab" */ = {
+		EF31192A2C29AE1600209AB5 /* Build configuration list for PBXNativeTarget "FoucasuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3119282C29AE1600209AB5 /* Debug */,
+				EF3119292C29AE1600209AB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7ABC312C1D6924008DA464 /* Build configuration list for PBXProject "Foucasu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF7ABC422C1D6925008DA464 /* Debug */,
@@ -418,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF7ABC442C1D6925008DA464 /* Build configuration list for PBXNativeTarget "CustomTab" */ = {
+		EF7ABC442C1D6925008DA464 /* Build configuration list for PBXNativeTarget "Foucasu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF7ABC452C1D6925008DA464 /* Debug */,
@@ -428,6 +591,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF31192B2C29AE7000209AB5 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.0;
+			};
+		};
+		EF31192E2C29AE8400209AB5 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = exactVersion;
+				version = 13.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF3119322C29AEC500209AB5 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF31192B2C29AE7000209AB5 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		EF3119342C29AECD00209AB5 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF31192E2C29AE8400209AB5 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF7ABC2E2C1D6924008DA464 /* Project object */;
 }
