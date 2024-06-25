@@ -65,8 +65,6 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     func didClickActivityButton() {
         if isStarted {
             stopTimer()
-            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-            
         } else {
             animatedShowTimerView(isVisible: true)
         }
@@ -134,6 +132,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
         totalSeconds = 0
         staticTotalSeconds = 0
         timerStringValue = "00:00"
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     
     private func resetTimer() {

@@ -29,27 +29,7 @@ struct FocusView: View {
             GeometryReader { proxy in
                 VStack(spacing: spacing) {
                     // Timer Ring
-                    ZStack {
-                        shadowRingView
-                        
-                        // Timer Circle's Background
-                        Circle()
-                            .fill(.backgroundDark)
-                        
-                        // Progress Ring
-                        Circle()
-                            .trim(from: 0, to: viewModel.progress)
-                            .stroke(Color.primary500.opacity(0.7), lineWidth: 10)
-                        
-                        // Knob
-                        knobView
-                        
-                        countText
-                    }
-                    .padding(60)
-                    .frame(height: proxy.size.width)
-                    .rotationEffect(.init(degrees: -90))
-                    .animation(.easeInOut, value: viewModel.progress)
+                    timerRingView(size: proxy.size)
                     
                     activityButton
                 }
@@ -88,6 +68,31 @@ extension FocusView {
             
             Spacer()
         }
+    }
+    
+    @ViewBuilder
+    func timerRingView(size: CGSize) -> some View {
+        ZStack {
+            shadowRingView
+            
+            // Timer Circle's Background
+            Circle()
+                .fill(.backgroundDark)
+            
+            // Progress Ring
+            Circle()
+                .trim(from: 0, to: viewModel.progress)
+                .stroke(Color.primary500.opacity(0.7), lineWidth: 10)
+            
+            // Knob
+            knobView
+            
+            countText
+        }
+        .padding(60)
+        .frame(height: size.width)
+        .rotationEffect(.init(degrees: -90))
+        .animation(.easeInOut, value: viewModel.progress)
     }
     
     @ViewBuilder
