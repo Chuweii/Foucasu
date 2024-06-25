@@ -31,7 +31,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     var hour: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
-    private var totalSeconds: Int = 0
+    var totalSeconds: Int = 0
     private var staticTotalSeconds: Int = 0
     private let secondsInAnHour: Int = 3600
     

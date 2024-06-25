@@ -39,7 +39,7 @@ class FocusViewModelSpec: QuickSpec {
                 
                 context("when user setup the time and click save button") {
                     beforeEach {
-                        viewModel.seconds = 10
+                        viewModel.seconds = 3
                         viewModel.didClickSaveButton()
                     }
                     it("timer will start counting down") {

@@ -10,14 +10,15 @@ import SwiftUI
 struct TabBarView: View {
     // MARK: - Properties
 
-    let tabBarData: TabBarData = .init()
+    let tabBarData: TabBarData
+    let focusViewModel: FocusViewModel
 
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
                 switch tabBarData.activeTab {
                 case .Focus: 
-                    FocusView()
+                    FocusView(viewModel: focusViewModel)
                         .preferredColorScheme(.dark)
                 case .List: 
                     TodoListView()
@@ -32,5 +33,5 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView()
+    TabBarView(tabBarData: .init(), focusViewModel: .init())
 }

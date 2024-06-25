@@ -16,7 +16,11 @@ struct FocusView: View {
     
     // MARK: - Init Properties
     
-    let viewModel: FocusViewModel = .init()
+    var viewModel: FocusViewModel
+    
+    init(viewModel: FocusViewModel = .init()) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -128,7 +132,8 @@ extension FocusView {
         Text(viewModel.timerStringValue)
             .font(.system(size: 45, weight: .thin))
             .rotationEffect(.init(degrees: 90))
-            .animation(.none, value: viewModel.progress)
+            .contentTransition(.numericText(value: viewModel.progress))
+            .animation(.snappy, value: viewModel.progress)
     }
     
     @ViewBuilder
@@ -262,5 +267,8 @@ extension FocusView {
 }
 
 #Preview {
-    TabBarView()
+    let tabBarData: TabBarData = .init()
+    let viewModel: FocusViewModel = .init()
+    return TabBarView(tabBarData: tabBarData, focusViewModel: viewModel)
+
 }

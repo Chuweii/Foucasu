@@ -56,6 +56,7 @@ struct CustomTabBar: View {
 }
 
 #Preview {
-    TabBarView()
-        .environment(TabBarData())
+    let tabBarData: TabBarData = .init()
+    let viewModel: FocusViewModel = .init()
+    return TabBarView(tabBarData: tabBarData, focusViewModel: viewModel)
 }
