@@ -28,7 +28,6 @@ struct FocusView: View {
 
             GeometryReader { proxy in
                 VStack(spacing: spacing) {
-                    // Timer Ring
                     timerRingView(size: proxy.size)
                     
                     activityButton
@@ -62,7 +61,7 @@ extension FocusView {
     @ViewBuilder
     var titleText: some View {
         HStack {
-            Text("Focus")
+            Text("FOCUS")
                 .font(.largeTitle).bold()
                 .foregroundStyle(.white)
             
@@ -168,6 +167,7 @@ extension FocusView {
         ZStack {
             Color.gray800
                 .opacity(viewModel.isTimerViewVisible ? 0.6 : 0)
+                .allowsHitTesting(viewModel.isTimerViewVisible)
                 .onTapGesture {
                     viewModel.didClickEmptySpace()
                 }
@@ -180,26 +180,26 @@ extension FocusView {
                 HStack(spacing: spacing) {
                     Menu {
                         contextMenuOptionsView(maxValue: 12, hint: "hr") { value in
-                            viewModel.hour = value
+                            viewModel.time.hour = value
                         }
                     } label: {
-                        menuLabelText(title: "\(viewModel.hour)", unit: "hr")
+                        menuLabelText(title: "\(viewModel.time.hour)", unit: "hr")
                     }
                     
                     Menu {
                         contextMenuOptionsView(maxValue: 60, hint: "min") { value in
-                            viewModel.minutes = value
+                            viewModel.time.minutes = value
                         }
                     } label: {
-                        menuLabelText(title: "\(viewModel.minutes)", unit: "min")
+                        menuLabelText(title: "\(viewModel.time.minutes)", unit: "min")
                     }
                     
                     Menu {
                         contextMenuOptionsView(maxValue: 60, hint: "sec") { value in
-                            viewModel.seconds = value
+                            viewModel.time.seconds = value
                         }
                     } label: {
-                        menuLabelText(title: "\(viewModel.seconds)", unit: "sec")
+                        menuLabelText(title: "\(viewModel.time.seconds)", unit: "sec")
                     }
                 }
                 .padding(.top, topPadding)
@@ -251,6 +251,7 @@ extension FocusView {
             .foregroundStyle(.white.opacity(textOpacity))
             .padding(.horizontal, horizontalPadding)
             .padding(.vertical, verticalPadding)
+            .fixedSize(horizontal: true, vertical: false)
             .background(
                 Capsule()
                     .fill(.white.opacity(textBackgroundOpacity))

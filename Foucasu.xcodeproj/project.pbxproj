@@ -11,6 +11,10 @@
 		EF3119332C29AEC500209AB5 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = EF3119322C29AEC500209AB5 /* Quick */; };
 		EF3119352C29AECD00209AB5 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = EF3119342C29AECD00209AB5 /* Nimble */; };
 		EF3119372C29AF3E00209AB5 /* FocusViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119362C29AF3E00209AB5 /* FocusViewModelSpec.swift */; };
+		EF3119392C2B9E1A00209AB5 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3119382C2B9E1A00209AB5 /* FloatingButton.swift */; };
+		EF31193B2C2B9E6400209AB5 /* ScaleEffectButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31193A2C2B9E6400209AB5 /* ScaleEffectButtonStyle.swift */; };
+		EF31193D2C2BFA6100209AB5 /* TodoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31193C2C2BFA6000209AB5 /* TodoEditView.swift */; };
+		EF3119402C2CC16600209AB5 /* TImeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31193F2C2CC16600209AB5 /* TImeModel.swift */; };
 		EF563BBA2C23B5280037834B /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BB92C23B5280037834B /* FocusView.swift */; };
 		EF563BBC2C23BC310037834B /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BBB2C23BC300037834B /* TodoListView.swift */; };
 		EF563BC02C23BEE70037834B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF563BBF2C23BEE70037834B /* TabBarView.swift */; };
@@ -42,6 +46,10 @@
 		EF3119222C29AE1600209AB5 /* FoucasuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoucasuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3119242C29AE1600209AB5 /* FoucasuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoucasuTests.swift; sourceTree = "<group>"; };
 		EF3119362C29AF3E00209AB5 /* FocusViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewModelSpec.swift; sourceTree = "<group>"; };
+		EF3119382C2B9E1A00209AB5 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		EF31193A2C2B9E6400209AB5 /* ScaleEffectButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectButtonStyle.swift; sourceTree = "<group>"; };
+		EF31193C2C2BFA6000209AB5 /* TodoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEditView.swift; sourceTree = "<group>"; };
+		EF31193F2C2CC16600209AB5 /* TImeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImeModel.swift; sourceTree = "<group>"; };
 		EF563BB92C23B5280037834B /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		EF563BBB2C23BC300037834B /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		EF563BBF2C23BEE70037834B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -96,13 +104,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF31193E2C2CC13D00209AB5 /* FocusView */ = {
+			isa = PBXGroup;
+			children = (
+				EF563BB92C23B5280037834B /* FocusView.swift */,
+				EF563BC92C27C44A0037834B /* FocusViewModel.swift */,
+				EF31193F2C2CC16600209AB5 /* TImeModel.swift */,
+			);
+			path = FocusView;
+			sourceTree = "<group>";
+		};
 		EF563BB82C23B5100037834B /* CoreView */ = {
 			isa = PBXGroup;
 			children = (
+				EF31193E2C2CC13D00209AB5 /* FocusView */,
 				EF563BBF2C23BEE70037834B /* TabBarView.swift */,
-				EF563BB92C23B5280037834B /* FocusView.swift */,
 				EF563BBB2C23BC300037834B /* TodoListView.swift */,
-				EF563BC92C27C44A0037834B /* FocusViewModel.swift */,
 			);
 			path = CoreView;
 			sourceTree = "<group>";
@@ -112,6 +129,7 @@
 			children = (
 				EF7ABC4E2C1FC48E008DA464 /* CustomTabBar */,
 				EF563BCD2C27D4BD0037834B /* RoundedCorner.swift */,
+				EF3119382C2B9E1A00209AB5 /* FloatingButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -187,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7ABC4C2C1FC40E008DA464 /* NoAnimationButtonStyle.swift */,
+				EF31193A2C2B9E6400209AB5 /* ScaleEffectButtonStyle.swift */,
 			);
 			path = ButtonStyle;
 			sourceTree = "<group>";
@@ -197,6 +216,7 @@
 				EF7ABC3B2C1D6924008DA464 /* CustomTabBar.swift */,
 				EF7ABC472C1D6A96008DA464 /* Tabs.swift */,
 				EF7ABC492C1FBE29008DA464 /* TabBarData.swift */,
+				EF31193C2C2BFA6000209AB5 /* TodoEditView.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -324,11 +344,15 @@
 				EF563BC62C23C35A0037834B /* Color+Extension.swift in Sources */,
 				EF563BC02C23BEE70037834B /* TabBarView.swift in Sources */,
 				EF563BCC2C27D4500037834B /* Extension.swift in Sources */,
+				EF31193D2C2BFA6100209AB5 /* TodoEditView.swift in Sources */,
 				EF563BCE2C27D4BD0037834B /* RoundedCorner.swift in Sources */,
 				EF563BC82C23EB920037834B /* SafeArea+Extension.swift in Sources */,
 				EF7ABC3A2C1D6924008DA464 /* FoucasuApp.swift in Sources */,
+				EF31193B2C2B9E6400209AB5 /* ScaleEffectButtonStyle.swift in Sources */,
+				EF3119402C2CC16600209AB5 /* TImeModel.swift in Sources */,
 				EF563BCA2C27C44A0037834B /* FocusViewModel.swift in Sources */,
 				EF7ABC4D2C1FC40E008DA464 /* NoAnimationButtonStyle.swift in Sources */,
+				EF3119392C2B9E1A00209AB5 /* FloatingButton.swift in Sources */,
 				EF563BBA2C23B5280037834B /* FocusView.swift in Sources */,
 				EF7ABC482C1D6A96008DA464 /* Tabs.swift in Sources */,
 				EF563BBC2C23BC310037834B /* TodoListView.swift in Sources */,

@@ -19,7 +19,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     var isTimerViewVisible: Bool = false
     var isFinished: Bool = false
     var isTimeAtZero: Bool {
-        hour == 0 && minutes == 0 && seconds == 0
+        time.hour == 0 && time.minutes == 0 && time.seconds == 0
     }
 
     /// Timer Properties
@@ -28,9 +28,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
 
     // MARK: - Time Calculate Properties
     
-    var hour: Int = 0
-    var minutes: Int = 0
-    var seconds: Int = 0
+    var time: Time = .init(hour: 0, minutes: 0, seconds: 0)
     var totalSeconds: Int = 0
     private var staticTotalSeconds: Int = 0
     private let secondsInAnHour: Int = 3600
@@ -49,7 +47,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     }
     
     func didClickStartNewButton() {
-        stopTimer()
+        self.time = getLastTime()
         animatedShowTimerView(isVisible: true)
     }
     
@@ -82,7 +80,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
         setupTimeStringValue()
         
         // Calculating Total Second For Timer
-        totalSeconds = (hour * secondsInAnHour) + (minutes * 60) + seconds
+        totalSeconds = (time.hour * secondsInAnHour) + (time.minutes * 60) + time.seconds
         staticTotalSeconds = totalSeconds
         
         animatedShowTimerView(isVisible: false)
@@ -109,9 +107,9 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
             progress = CGFloat(totalSeconds) / CGFloat(staticTotalSeconds)
             progress = (progress < 0 ? 0 : progress)
             
-            hour = totalSeconds / secondsInAnHour
-            minutes = (totalSeconds / 60) % 60
-            seconds = totalSeconds % 60
+            time.hour = totalSeconds / secondsInAnHour
+            time.minutes = (totalSeconds / 60) % 60
+            time.seconds = totalSeconds % 60
             
             // Setting Time String Value
             setupTimeStringValue()
@@ -129,16 +127,28 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
             isFinished = false
             resetTimer()
         }
-        totalSeconds = 0
-        staticTotalSeconds = 0
-        timerStringValue = "00:00"
+        // Remove pending notification requests
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     
     private func resetTimer() {
-        hour = 0
-        minutes = 0
-        seconds = 0
+        time.hour = 0
+        time.minutes = 0
+        time.seconds = 0
+        totalSeconds = 0
+        staticTotalSeconds = 0
+        timerStringValue = "00:00"
+    }
+    
+    private func getLastTime() -> Time {
+        let lastTime: Time = .init(
+            hour: staticTotalSeconds / 3600,
+            minutes: (
+                staticTotalSeconds % 3600
+            ) / 60,
+            seconds: staticTotalSeconds % 60
+        )
+        return lastTime
     }
     
     // MARK: - Notification Center
@@ -181,9 +191,9 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     }
     
     private func setupTimeStringValue() {
-        let hourStringValue = "\(hour == 0 ? "" : "\(hour):")"
-        let minutesStringValue = "\(minutes >= 10 ? "\(minutes)" : "0\(minutes)"):"
-        let secondsStringValue = "\(seconds >= 10 ? "\(seconds)" : "0\(seconds)")"
+        let hourStringValue = "\(time.hour == 0 ? "" : "\(time.hour):")"
+        let minutesStringValue = "\(time.minutes >= 10 ? "\(time.minutes)" : "0\(time.minutes)"):"
+        let secondsStringValue = "\(time.seconds >= 10 ? "\(time.seconds)" : "0\(time.seconds)")"
         timerStringValue = hourStringValue + minutesStringValue + secondsStringValue
     }
 }
