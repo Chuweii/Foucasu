@@ -64,6 +64,10 @@ class FocusViewModelSpec: QuickSpec {
                         it("screen should show SetTimeView") {
                             expect(viewModel.isTimerViewVisible).to(beTrue())
                         }
+                        
+                        it("and show the last set time") {
+                            expect(viewModel.time.seconds).to(equal(3))
+                        }
                     }
                 }
             }

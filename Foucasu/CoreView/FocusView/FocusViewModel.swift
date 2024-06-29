@@ -142,10 +142,8 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     
     private func getLastTime() -> Time {
         let lastTime: Time = .init(
-            hour: staticTotalSeconds / 3600,
-            minutes: (
-                staticTotalSeconds % 3600
-            ) / 60,
+            hour: staticTotalSeconds / secondsInAnHour,
+            minutes: (staticTotalSeconds % secondsInAnHour) / 60,
             seconds: staticTotalSeconds % 60
         )
         return lastTime
