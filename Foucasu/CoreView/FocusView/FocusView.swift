@@ -16,7 +16,7 @@ struct FocusView: View {
     
     // MARK: - Init Properties
     
-    var viewModel: FocusViewModel
+    @Bindable var viewModel: FocusViewModel
     
     init(viewModel: FocusViewModel = .init()) {
         self.viewModel = viewModel
@@ -43,7 +43,7 @@ struct FocusView: View {
         .overlay {
             setTimerView
         }
-        .alert("Congratulation!!\nYou completed it 🥳🤩", isPresented: .constant(viewModel.isFinished)) {
+        .alert("Congratulation!!\nYou completed it 🥳🤩", isPresented: $viewModel.isFinished) {
             Button("Start New", role: .cancel) {
                 viewModel.didClickStartNewButton()
             }

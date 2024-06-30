@@ -15,9 +15,15 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     
     var progress: CGFloat = 1
     var timerStringValue: String = "00:00"
-    var isStarted: Bool = false
-    var isTimerViewVisible: Bool = false
+    var isStarted: Bool = false {
+        didSet {
+            if !isStarted {
+                timerCancellable?.cancel()
+            }
+        }
+    }
     var isFinished: Bool = false
+    var isTimerViewVisible: Bool = false
     var isTimeAtZero: Bool {
         time.hour == 0 && time.minutes == 0 && time.seconds == 0
     }
@@ -47,7 +53,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     }
     
     func didClickStartNewButton() {
-        self.time = getLastTime()
+        time = getLastTime()
         animatedShowTimerView(isVisible: true)
     }
     
@@ -102,22 +108,21 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     }
     
     private func countingTime() {
-        if isStarted {
-            totalSeconds -= 1
-            progress = CGFloat(totalSeconds) / CGFloat(staticTotalSeconds)
-            progress = (progress < 0 ? 0 : progress)
+        guard isStarted else { return }
+        totalSeconds -= 1
+        progress = CGFloat(totalSeconds) / CGFloat(staticTotalSeconds)
+        progress = (progress < 0 ? 0 : progress)
             
-            time.hour = totalSeconds / secondsInAnHour
-            time.minutes = (totalSeconds / 60) % 60
-            time.seconds = totalSeconds % 60
+        time.hour = totalSeconds / secondsInAnHour
+        time.minutes = (totalSeconds / 60) % 60
+        time.seconds = totalSeconds % 60
             
-            // Setting Time String Value
-            setupTimeStringValue()
+        // Setting Time String Value
+        setupTimeStringValue()
 
-            if isTimeAtZero {
-                isStarted = false
-                isFinished = true
-            }
+        if isTimeAtZero {
+            isStarted = false
+            isFinished = true
         }
     }
     
@@ -181,7 +186,7 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     
     // MARK: - Methods
     
-    func animatedShowTimerView(isVisible: Bool) {
+    private func animatedShowTimerView(isVisible: Bool) {
         withAnimation {
             if !isTimerViewVisible { progress = 1 }
             isTimerViewVisible = isVisible
@@ -190,8 +195,8 @@ class FocusViewModel: NSObject, UNUserNotificationCenterDelegate {
     
     private func setupTimeStringValue() {
         let hourStringValue = "\(time.hour == 0 ? "" : "\(time.hour):")"
-        let minutesStringValue = "\(time.minutes >= 10 ? "\(time.minutes)" : "0\(time.minutes)"):"
-        let secondsStringValue = "\(time.seconds >= 10 ? "\(time.seconds)" : "0\(time.seconds)")"
+        let minutesStringValue = String(format: "%02d:", time.minutes)
+        let secondsStringValue = String(format: "%02d", time.seconds)
         timerStringValue = hourStringValue + minutesStringValue + secondsStringValue
     }
 }
