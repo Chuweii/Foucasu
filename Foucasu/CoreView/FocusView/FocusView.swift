@@ -105,7 +105,7 @@ extension FocusView {
             .stroke(.white.opacity(0.03), lineWidth: 80)
         
         Circle()
-            .stroke(Color.primary500, lineWidth: 5)
+            .stroke(.blue300, lineWidth: 5)
             .blur(radius: 15)
             .padding(-2)
     }
@@ -187,7 +187,7 @@ extension FocusView {
                     }
                     
                     Menu {
-                        contextMenuOptionsView(maxValue: 60, hint: "min") { value in
+                        contextMenuOptionsView(maxValue: 59, hint: "min") { value in
                             viewModel.time.minutes = value
                         }
                     } label: {
@@ -195,7 +195,7 @@ extension FocusView {
                     }
                     
                     Menu {
-                        contextMenuOptionsView(maxValue: 60, hint: "sec") { value in
+                        contextMenuOptionsView(maxValue: 59, hint: "sec") { value in
                             viewModel.time.seconds = value
                         }
                     } label: {
