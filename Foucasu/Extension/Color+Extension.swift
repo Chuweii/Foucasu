@@ -35,8 +35,8 @@ extension Color {
         )
     }
 
-    static let primary500 = Color(hex: "#424242")
-    static let primary300 = Color(hex: "#7D7D7D")
+    static let primary500 = Color(hex: "#005786")
+    static let primary300 = Color(hex: "#4C8CAF")
     static let gray100 = Color(hex: "#F2F2F2")
     static let gray200 = Color(hex: "#DCDCDC")
     static let gray300 = Color(hex: "#B7B7B7")
@@ -50,11 +50,11 @@ extension Color {
     static let green100 = Color(hex: "#BBE5C3")
     static let green300 = Color(hex: "#34C759")
     static let green500 = Color(hex: "#1AAD19")
-    static let blue500 = Color(hex: "#005786")
-    static let blue300 = Color(hex: "#4C8CAF")
+    static let blue500 = Color(hex: "#4169E1")
+    static let blue300 = Color(hex: "#6495ED")
     static let mask100 = Color(hex: "#C4C4C4").opacity(0.5)
     static let mask500 = Color(.black).opacity(0.8)
-    static let backgroundDark = Color(hex: "#282828")
+    static let backgroundDark = Color(hex: "#003A4D")
 }
 
 extension ShapeStyle where Self == Color {
